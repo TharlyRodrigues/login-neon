@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,400&family=Roboto:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(respingo-de-tinta-na-agua-escura.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.login-box {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  /* background: #057992; */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 8px 8px 8px rgba(9, 202, 244, 1);
+  font-family: "Poppins", sans-serif;
+  /* border: 2px solid rgba(255, 255, 255, 0.5); */
+  backdrop-filter: blur(10px);
+}
+
+.login-box::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  background-image: conic-gradient(
+    #45f3ff,
+    transparent,
+    transparent 180deg,
+    #45f3ff,
+    transparent,
+    transparent 360deg
+  );
+  animation: animate 6s linear infinite;
+}
+
+form {
+  position: absolute;
+  inset: 2px;
+  border-radius: 8px;
+  background: #05657a;
+  padding: 50px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  width: 310px;
+  margin: 30px 0;
+  border-bottom: 2px solid #45f3ff;
+}
+
+.input-box label {
+  position: absolute;
+  top: 12px;
+  left: 25px;
+  transform: translate(-50%); /*mudar a posição do label*/
+  font-size: 1em;
+  pointer-events: none;
+  color: #fff;
+  transition: 0.5s;
+}
+/* animação */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -10px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  outline: none;
+  color: #fff;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 57px;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: -15px 0 15px;
+  font-size: 13px;
+  color: #fff;
+  gap: 30px;
+}
+
+.remember-forgot label input {
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  height: 40px;
+  padding: 10px 20px;
+  background-image: linear-gradient(to right, #09caf4, #07a2c3);
+  box-shadow: 4px 4px 8px rgba(9, 202, 244, 1);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-button:hover {
+  background: #033d49;
+  box-shadow: 4px 4px 8px rgba(9, 202, 244, 1);
+}
+
+.register-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 2px;
+}
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+.register-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0 15px;
+  font-size: 13px;
+  color: #fff;
+}
+
+.reds a {
+  color: #fff;
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+/* .register-link a {
+  margin-left: 110px;
+} */
+
+@keyframes animate {
+  0% {
+    transform: scale(3) rotate(0deg);
+  }
+  100% {
+    transform: scale(3) rotate(360deg);
+  }
+}
